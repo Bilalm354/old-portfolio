@@ -1,0 +1,18 @@
+*{
+    margin: 0px auto;
+    padding: 0;
+    font-family: monospace;
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    
+    
+}
+
+.container{
+    margin-top: 10%;
+    height: auto;
+    width: auto;
+    line-height: 30px;
+}
