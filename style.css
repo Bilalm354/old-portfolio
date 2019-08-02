@@ -1,59 +1,191 @@
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+
+/* apply to everything */
+
+
+
+
 * {
     margin: 0px auto;
     padding: 0;
-    font-family: monospace;
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: light;
     color: white;
     text-align: center;
-    font-weight: bold;
-
+    scroll-behavior: smooth;
 }
 
+#welcome h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation:
+        type 2.5s steps(60, end);
+}
+
+#welcome a {
+    white-space: nowrap;
+    overflow: hidden;
+    /*animation: type 0.2s steps(60, end);*/
+    width: 30em;
+    font-size: 14px;
+}
+
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+}
+
+/*  */
 header {
     width: 100%;
-    font-size: 20px;
-    padding: 10px;
-    border-bottom: 1px solid white;
-    background-color: dodgerblue;
+    font-size: 14px;
+    background-color: black;
     position: fixed;
+    text-transform: uppercase;
 }
 
 header li {
     list-style: none;
     display: inline-block;
-    padding: 0px 55px;
+    opacity: 1;
 }
 
+body {
+    width: 100%;
+    /*scroll-snap-type: y mandatory;*/
+    overflow: scroll;
+}
+
+/* sections */
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    background-color: mediumpurple;
-    border-bottom: 5px solid white;
+    min-height: 100vh;
+    /*scroll-snap-align: start;*/
 }
 
-body {
-    width: 100%;
-    font-size: 16px;
+#welcome a {}
+
+
+/* classes */
+.gray {
+    background-color: darkslateblue;
 }
+
+.gray2 {
+    background-color: darkslategrey;
+}
+
+/* grid */
 
 .grid {
-    width: 95%;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 30px;
+    width: inherit;
+    padding: 20px;
+    width: 80%;
+
 }
 
-ul{
+.grid img {}
+
+.proj {
+    object-fit: contain;
+    grid-column: auto/ span 1;
+    grid-row: auto/ span 1;
+}
+
+.proj img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/**/
+
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     display: block;
 }
 
-a:hover{
-    opacity:0.5;
+#projects img:hover {
+    opacity: 0.8;
+}
+
+/* IDs */
+
+#header a:hover {
+    color: indianred;
+}
+
+#button1 {
+    display: block;
+    background-color: black;
+    height: inherit;
+    border: 1px black;
+    padding: 10px 40px;
+
+}
+
+#button1:hover {
+    background-color: orange;
+    opacity: 100%;
+
+}
+
+
+#button {
+    border: solid 1px white;
+    padding: 10px 20px;
+    display: block;
+    background-color: black;
+}
+
+#button:hover {
+    background-color: orange;
+    opacity: 100%;
+}
+
+#button3 {
+    border: solid 1px white;
+    width: 30em;
+    padding: 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    background-color: black;
+}
+
+#button3:hover {
+    background-color: orange;
+    opacity: 100%;
+}
+
+#box {
+    border: 1px solid white;
+    padding: 5px;
+    line-height: 40px;
+    width: 10em;
+    font-size: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#disp {
+    display: inline-block;
 }
