@@ -80,7 +80,7 @@ section {
     align-items: center;
     width: 100%;
     /*    min-height: 100vh;*/
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
     /*    position: relative;*/
 }
@@ -106,13 +106,11 @@ section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
-    width: inherit;
     padding: 10px;
-    width: 60%;
+    width: 80%;
 
 }
 
-.grid img {}
 
 .proj {
     object-fit: contain;
@@ -123,6 +121,7 @@ section {
 .proj img {
     width: 100%;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 /**/
