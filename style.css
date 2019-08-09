@@ -49,7 +49,7 @@ header {
     background-color: black;
     position: fixed;
     text-transform: uppercase;
-/*    height: auto;*/
+    /*    height: auto;*/
     vertical-align: middle;
 }
 
@@ -59,7 +59,7 @@ header li {
     opacity: 1;
 }
 
-body{
+body {
     height: 100vh;
     overflow: scroll;
     scroll-snap-points-y: repeat(100vh);
@@ -79,14 +79,17 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-/*    min-height: 100vh;*/
+    /*    min-height: 100vh;*/
     height: 100vh;
     scroll-snap-align: start;
-/*    position: relative;*/
+    /*    position: relative;*/
 }
 
 #welcome a {}
 
+#about p {
+    width: 80%;
+}
 
 /* classes */
 .gray {
@@ -101,11 +104,11 @@ section {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     width: inherit;
-    padding: 20px;
-    width: 80%;
+    padding: 10px;
+    width: 60%;
 
 }
 
@@ -119,7 +122,7 @@ section {
 
 .proj img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 /**/
@@ -146,7 +149,7 @@ a {
 #button1 {
     display: block;
     background-color: black;
-/*    height: inherit;*/
+    /*    height: inherit;*/
     border: 1px black;
     padding: 10px 40px;
 
@@ -191,9 +194,9 @@ a {
     padding: 10px;
     width: 10em;
     font-size: 20px;
-/*    vertical-align: middle;*/
+    /*    vertical-align: middle;*/
     display: inline-block;
-    margin: 0 15px;
+    margin: 15px;
     background: black;
 }
 
@@ -201,7 +204,7 @@ a {
     background: orange;
 }
 
-#box div{
+#box div {
     display: inline-block;
     vertical-align: middle;
     padding: 0 5px;
