@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<canvas id="gameCanvas" width="600" height="600"></canvas>
+<script>
+    var canvas;
+    var canvasContext;
+    var headX = 60;
+    var headY = 60;
+    var box = 30;
+    var headSpeedX = box;
+    var headSpeedY = 0;
+
+
+    var score = 1; // Score = length, so goes up everytime you eat a piece of food
+
+    var showEndScreen = false;
+
+    window.onload = function() {
+        canvas = document.getElementById('gameCanvas');
+        canvasContext = canvas.getContext('2d');
+        var framesPerSecond = 10;
+        setInterval(function() {
+            move();
+            draw();
+        }, 1000 / framesPerSecond);
+
+        canvas.addEventListener('keydown', direction);
+    }
+
+
+    let d;
+
+    function direction(evt) {
+        if (evt.keyCode == 37 && d != "RIGHT") {
+            d = "LEFT";
+        } else if (evt.keyCode == 38) {
+            d = "UP";
+        } else if (evt.keyCode == 39) {
+            d = "RIGHT";
+        } else if (evt.keyCode == 40) {
+            d = "DOWN";
+        }
+    }
+
+    function drawSnake() {
+        colorRect(headX, headY, box, box, 'white');
+    }
+
+    function drawFood() {
+
+    }
+
+    function draw() {
+        colorRect(0, 0, canvas.width, canvas.height, 'black');
+
+        if (showEndScreen) {
+            canvasContext.fillStyle = 'white';
+            canvasContext.fillText("game over, score = " + score, 350, 400);
+            return;
+        }
+
+        drawSnake();
+
+    }
+
+    function move() {
+        headX += headSpeedX;
+        headY += headSpeedY;
+
+    }
+
+    function colorRect(leftX, topY, width, height, drawColor) {
+        canvasContext.fillStyle = drawColor;
+        canvasContext.fillRect(leftX, topY, width, height);
+    }
+
+</script>
+
+</html>
