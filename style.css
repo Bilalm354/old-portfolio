@@ -23,8 +23,7 @@
     white-space: nowrap;
     overflow: hidden;
     width: 30em;
-    animation:
-        type 2.5s steps(60, end);
+    animation: type 2.5s steps(60, end);
 }
 
 #welcome a {
@@ -32,7 +31,7 @@
     overflow: hidden;
     /*animation: type 0.2s steps(60, end);*/
     width: 30em;
-    font-size: 14px;
+    padding: 1px;
 }
 
 
@@ -62,8 +61,10 @@ header li {
 body {
     height: 100vh;
     overflow: scroll;
+    /*
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
+*/
 }
 
 /*
@@ -74,14 +75,14 @@ body {
 
 /* sections */
 section {
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /*    min-height: 100vh;*/
     min-height: 100vh;
-    scroll-snap-align: start;
+    /*    scroll-snap-align: start;*/
     /*    position: relative;*/
 }
 
@@ -97,7 +98,7 @@ section {
 }
 
 .gray2 {
-    background-color: darkslategrey;
+    background-color: darkslategray;
 }
 
 /* grid */
@@ -107,21 +108,22 @@ section {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 10px;
-    width: 80%;
+    width: 50%;
 
 }
 
 
 .proj {
-    object-fit: contain;
     grid-column: auto/ span 1;
     grid-row: auto/ span 1;
 }
 
 .proj img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: auto;
+
 }
 
 /**/
@@ -132,7 +134,11 @@ ul {
 
 a {
     text-decoration: none;
-    display: block;
+    /*    display: block;*/
+}
+
+a:visited {
+    text-decoration: none;
 }
 
 #projects img:hover {
@@ -141,9 +147,7 @@ a {
 
 /* IDs */
 
-#header a:hover {
-    color: indianred;
-}
+
 
 #button1 {
     display: block;
@@ -151,15 +155,37 @@ a {
     /*    height: inherit;*/
     border: 1px black;
     padding: 10px 40px;
-
 }
 
+a #button1:hover {
+    background-color: orange;
+    opacity: 100%;
+}
+
+/*
 #button1:hover {
     background-color: orange;
     opacity: 100%;
-
 }
 
+#button1 a:hover {}
+*/
+
+
+#buttonproj {
+    border: solid 1px white;
+    padding: 5px 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    width: auto;
+    background-color: black;
+}
+
+#buttonproj:hover {
+    background-color: orange;
+    opacity: 100%;
+}
 
 #button {
     border: solid 1px white;
@@ -172,6 +198,8 @@ a {
     background-color: orange;
     opacity: 100%;
 }
+
+
 
 #button3 {
     border: solid 1px white;
@@ -195,7 +223,7 @@ a {
     font-size: 20px;
     /*    vertical-align: middle;*/
     display: inline-block;
-    margin: 15px;
+    margin: 5px 30px;
     background: black;
 }
 
@@ -215,9 +243,47 @@ a {
 
 
 /*responsive mobile phones and tablets*/
+/*iphone portrait*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    * {}
 
-@media (max-width:400px) {
-    * {
-        background-color: yellow;
+    header {
+        width: 100%;
+        font-size: 50px;
+        background-color: black;
+        position: fixed;
+        text-transform: uppercase;
+        /*    height: auto;*/
+        vertical-align: middle;
+        z-index: 10;
+    }
+
+    header li {
+        list-style: none;
+        display: block;
+        opacity: 1;
+    }
+
+    #box {
+        border: 1px solid white;
+        padding: 10px;
+        width: 100%;
+        font-size: 20px;
+        /*    vertical-align: middle;*/
+        display: inline-block;
+        margin: 15px;
+        background: black;
+    }
+
+    #welcome h1 {
+        font-size: 50px;
+        width: 80%;
+    }
+
+    #welcome a {
+        font-size: 45px;
+        width: 70%;
+        line-height: 120px;
+        padding: 20px;
     }
 }
