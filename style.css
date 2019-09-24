@@ -105,7 +105,7 @@ section {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     padding: 10px;
     width: 50%;
@@ -114,11 +114,12 @@ section {
 
 
 .proj {
-    grid-column: auto/ span 1;
+    grid-column: auto/ span 2;
     grid-row: auto/ span 1;
 }
 
-.proj img {
+
+.grid img {
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -126,6 +127,8 @@ section {
     margin-bottom: 10px;
 
 }
+
+
 
 /**/
 
@@ -158,10 +161,11 @@ a:visited {
     padding: 10px 40px;
 }
 
+/*
 a #button1:hover {
     background-color: orange;
-    opacity: 100%;
 }
+*/
 
 /*
 #button1:hover {
@@ -172,6 +176,9 @@ a #button1:hover {
 #button1 a:hover {}
 */
 
+.black-orange-link: hover {
+    background: orage;
+}
 
 #buttonproj {
     border: solid 1px white;
@@ -181,10 +188,12 @@ a #button1:hover {
     background-color: black;
 }
 
+/*
 #buttonproj:hover {
     background-color: orange;
     opacity: 100%;
 }
+*/
 
 #button {
     border: solid 1px white;
@@ -193,10 +202,12 @@ a #button1:hover {
     background-color: black;
 }
 
+/*
 #button:hover {
     background-color: orange;
     opacity: 100%;
 }
+*/
 
 
 
@@ -210,10 +221,12 @@ a #button1:hover {
     background-color: black;
 }
 
+/*
 #button3:hover {
     background-color: orange;
     opacity: 100%;
 }
+*/
 
 #box {
     border: 1px solid white;
@@ -226,9 +239,11 @@ a #button1:hover {
     background: black;
 }
 
+/*
 #box:hover {
     background: orange;
 }
+*/
 
 #box div {
     display: inline-block;
