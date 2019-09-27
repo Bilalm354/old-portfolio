@@ -165,20 +165,18 @@ a:visited {
 a #button1:hover {
     background-color: orange;
 }
-*/
 
-/*
 #button1:hover {
     background-color: orange;
     opacity: 100%;
 }
 
 #button1 a:hover {}
-*/
 
 .black-orange-link: hover {
     background: orage;
 }
+*/
 
 #buttonproj {
     border: solid 1px white;
@@ -261,13 +259,14 @@ a #button1:hover {
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
     * {}
 
+/*
     header {
         width: 100%;
         font-size: 50px;
         background-color: black;
         position: fixed;
         text-transform: uppercase;
-        /*    height: auto;*/
+            height: auto;
         vertical-align: middle;
         z-index: 10;
     }
@@ -283,7 +282,7 @@ a #button1:hover {
         padding: 10px;
         width: 100%;
         font-size: 20px;
-        /*    vertical-align: middle;*/
+            vertical-align: middle;
         display: inline-block;
         margin: 15px;
         background: black;
@@ -300,4 +299,5 @@ a #button1:hover {
         line-height: 120px;
         padding: 20px;
     }
+*/
 }
